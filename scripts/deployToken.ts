@@ -8,9 +8,7 @@ async function main() {
     await erc20.deployed();
 
     console.log("ERC20 Token deployed to:", erc20.address);
-
 }
-
 main().catch((error) => {
     console.error(error);
     process.exitCode = 1;

@@ -6,6 +6,7 @@ import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
 import "hardhat-gas-reporter";
 import "solidity-coverage";
+import "./tasks/task"
 
 dotenv.config();
 
@@ -39,13 +40,23 @@ const config: HardhatUserConfig = {
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
     teleport:{
-      url: "https://teleport-localvalidator.qa.davionlabs.com/",
+      url: "https://evm-rpc2.qa.davionlabs.com/",
+      //url: "https://teleport-localvalidator.qa.davionlabs.com/",
       gasPrice: 5000000000,
       chainId: 7001,
       gas: 4100000,
       accounts:[
-          "8f14df1da1a318bec99800b72c5031e4fdc4ec017f00ab9659339ecb0193120e"
+          //sys
+          //"8f14df1da1a318bec99800b72c5031e4fdc4ec017f00ab9659339ecb0193120e"
+        '7eefd641410560e690736ee331bd32512c9b58419a877eff2189facbef33cd1e'
       ]
+    },
+    qaNew: {//0x40429f9578811b7ca3A1E806784BbDD50A9A3b5b
+      url: 'http://10.41.20.51:8545',
+      gasPrice: 5000000000,
+      chainId: 7001,
+      gas: 4100000,
+      accounts:['7eefd641410560e690736ee331bd32512c9b58419a877eff2189facbef33cd1e']
     },
     teleportTest: {
       url: 'https://dataseed.testnet.teleport.network',

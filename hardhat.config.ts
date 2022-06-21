@@ -32,7 +32,7 @@ task("accounts01", "Prints the list of accounts", async (taskArgs, hre) => {
 // Go to https://hardhat.org/config/ to learn more
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.11",
+  solidity: "0.8.9",
   networks: {
     ropsten: {
       url: process.env.ROPSTEN_URL || "",
@@ -51,12 +51,19 @@ const config: HardhatUserConfig = {
         '7eefd641410560e690736ee331bd32512c9b58419a877eff2189facbef33cd1e'
       ]
     },
-    qaNew: {//0x40429f9578811b7ca3A1E806784BbDD50A9A3b5b
+    qaNew1: {//0x2779021349908d8f268D353fF6BDf9f85071EeAc
       url: 'http://10.41.20.51:8545',
       gasPrice: 5000000000,
       chainId: 7001,
       gas: 4100000,
       accounts:['7eefd641410560e690736ee331bd32512c9b58419a877eff2189facbef33cd1e']
+    },
+    qaNew: {//0x2779021349908d8f268D353fF6BDf9f85071EeAc
+      url: 'http://10.41.20.51:8545',
+      gasPrice: 5000000000,
+      chainId: 7001,
+      gas: 4100000,
+      accounts:['6395A7C842A08515961888D21D72F409B61FBCE96AF1E520384E375F301A8297']
     },
     teleportTest: {
       url: 'https://dataseed.testnet.teleport.network',
